@@ -1,57 +1,55 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, IonButton,IonInput } from '@ionic/react';
+import { IonSlide, IonSlides,  IonContent, 
+  IonHeader, IonPage, IonTitle, 
+  IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, 
+  IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, 
+  IonButton,IonInput, IonText, IonRouterOutlet } from '@ionic/react';
 import React from  'react';
-
+import { Route } from 'react-router-dom'
 import ExploreContainer from '../components/ExploreContainer';
-import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
+import { pin, wifi, wine, warning, walk, } from 'ionicons/icons';
 import './Home.css';
+
+const slideOpts = {
+  initialSlide: 1,
+  speed: 400
+  
+};
 
 
 const Home: React.FC = () => {
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-        <IonCard>
+      <IonContent class='background' fullscreen>
+        <IonHeader>
+         
+        <IonCard class='card-check'>
           <IonCardHeader>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-            <IonCardTitle>PEWPEW</IonCardTitle>
+            <IonCardSubtitle></IonCardSubtitle>
+            <IonCardTitle class="text-title"> 
+              CHECK!
+
+            </IonCardTitle>
           </IonCardHeader>
 
-          <IonCardContent>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-            and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </IonCardContent>
+        
         </IonCard>
+        <IonLabel >
+            <section>
+              <IonButton routerLink='Login' expand="block"  class="button-home">AS</IonButton>
+            </section>
+            <section>
+              <IonButton routerLink="" expand="block" class="button-home">asd</IonButton>
+            </section>
+            <section>
+              <IonButton routerLink="" expand="block" class="button-home">SignUp</IonButton>
+            </section>
+        </IonLabel>
 
-        <IonCard>
-          <IonItem>
-            <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
-            <IonButton fill="outline" slot="end">View</IonButton>
-          </IonItem>
 
-          <IonCardContent>
-            This is content, without any paragraph or header tags,
-            within an ion-cardContent element.
-           </IonCardContent>
-
-          <IonItem>
-            <IonLabel position="stacked">Email</IonLabel>
-            <IonInput placeholder="Email"> </IonInput>
-          </IonItem>
-          <IonItem>
-            <IonLabel position="stacked">Password</IonLabel>
-            <IonInput placeholder="Password" type="password"> </IonInput>
-          </IonItem>
-        </IonCard>
+          
         </IonHeader>
-       
-      </IonContent>z
+      </IonContent>
     </IonPage>
   );
 };
