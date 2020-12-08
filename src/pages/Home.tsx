@@ -37,7 +37,7 @@ const Home: React.FC = () => {
         <IonLabel class="label">
             <section>
             
-              <IonButton routerLink="" expand="block"  class="button-home" >
+              <IonButton routerLink="Class" expand="block"  class="button-home" >
               <IonIcon slot="start" icon={logoGoogle} />
                 Login with google
               </IonButton>
