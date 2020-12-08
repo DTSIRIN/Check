@@ -22,13 +22,14 @@ import { IonSlide, IonSlides,  IonContent,
 
     const [email, setemail] = useState<string>();
     const [password, setpassword] = useState<string>();
+    const [name, setname] = useState<string>();
 
     return (
       <IonPage>
         <IonContent class='background1' fullscreen>
           <IonHeader collapse="condense">
-          <IonTitle class="text-login">
-                    Login
+          <IonTitle class="text-signup">
+                    Sign up
               </IonTitle>
               
           </IonHeader>
@@ -39,8 +40,14 @@ import { IonSlide, IonSlides,  IonContent,
             <IonItem>
             <IonInput value={password} placeholder="Password" class="input1" type="password"> </IonInput>
             </IonItem>
+            <IonItem>
+            <IonInput value={password} placeholder="Password Again" class="input1" type="password"> </IonInput>
+            </IonItem>
+            <IonItem>
+            <IonInput value={password} placeholder="Name" class="input1" type="password"> </IonInput>
+            </IonItem>
             <section>
-            <IonButton routerLink=""  class="button-login" fill="outline" color="tertiary" size="large">Login</IonButton>
+            <IonButton routerLink=""  class="button-login" fill="outline" color="tertiary">Sign up</IonButton>
             </section>
           </IonContent>
               

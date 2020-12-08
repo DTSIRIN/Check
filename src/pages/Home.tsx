@@ -6,7 +6,7 @@ import { IonSlide, IonSlides,  IonContent,
 import React from  'react';
 import { Route } from 'react-router-dom'
 import ExploreContainer from '../components/ExploreContainer';
-import { pin, wifi, wine, warning, walk, } from 'ionicons/icons';
+import { pin, wifi, wine, warning, walk, logoGoogle } from 'ionicons/icons';
 import './Home.css';
 
 const slideOpts = {
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
         <IonCard class='card-check'>
           <IonCardHeader>
             <IonCardSubtitle></IonCardSubtitle>
-            <IonCardTitle class="text-title"> 
+            <IonCardTitle class="text-check"> 
               CHECK!
 
             </IonCardTitle>
@@ -34,15 +34,18 @@ const Home: React.FC = () => {
 
         
         </IonCard>
-        <IonLabel >
+        <IonLabel class="label">
             <section>
-              <IonButton routerLink='Login' expand="block"  class="button-home">AS</IonButton>
+            
+              <IonButton routerLink='Login' expand="block"  class="button-home" >
+                Login
+              </IonButton>
             </section>
             <section>
-              <IonButton routerLink="" expand="block" class="button-home">asd</IonButton>
+              <IonButton routerLink="" expand="block" class="button-home">Login</IonButton>
             </section>
             <section>
-              <IonButton routerLink="" expand="block" class="button-home">SignUp</IonButton>
+              <IonButton routerLink="Signup" expand="block" class="button-home">Sign Up</IonButton>
             </section>
         </IonLabel>
 

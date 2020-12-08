@@ -4,20 +4,67 @@
 .background1 {
   --background: #ffffff;
 }
-.text-title {
-  font-size: 70px;
+.text-check {
+  font-size: 50px;
   color: #6c12f5;
-  margin-left: 20px;
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 30%;
 }
 
 .card-check {
-  margin-top: 150px;
+  margin-top: 130px;
   height: 225px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .button-home {
-  --border-width: 200px;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 20px;
+  --background: #ffffff;
+  color: #6c12f5;
+  --ripple-color: #6c12f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+}
+
+.text-login {
+  margin-top: 30%;
+  color: #6c12f5;
+  font-size: 70px;
+}
+.text-signup {
+  margin-top: 30%;
+  color: #6c12f5;
+  font-size: 50px;
+}
+
+.label {
+  margin-top: 30px;
+}
+
+.input {
+  padding-right: 10%;
+  margin-top: 70%;
+  border-width: 70%;
+  margin-left: 20%;
+}
+
+.input1 {
+  margin-top: 15px;
+  margin-left: 20%;
+}
+
+.button-login {
+  --background: #ffffff;
+  margin-left: 42%;
+  margin-top: 10%;
+  color: #6c12f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --rippler-color: 6c12f5;
 }
