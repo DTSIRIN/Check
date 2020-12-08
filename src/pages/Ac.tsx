@@ -2,8 +2,8 @@ import { IonSlide, IonSlides,  IonContent,
     IonHeader, IonPage, IonTitle, 
     IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, 
     IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, 
-    IonButton,IonInput, IonText, IonRouterOutlet, IonToggle } from '@ionic/react';
-  import React from  'react';
+    IonButton,IonInput, IonText, IonRouterOutlet, IonToggle, IonCheckbox } from '@ionic/react';
+  import React, { useState } from  'react';
   import { Route } from 'react-router-dom'
   import ExploreContainer from '../components/ExploreContainer';
   import { pin, wifi, wine, warning, walk, logoGoogle } from 'ionicons/icons';
@@ -16,16 +16,21 @@ import { IonSlide, IonSlides,  IonContent,
   };
   
   
-  const Home: React.FC = () => {
+  const Ac: React.FC = () => {
   
+    const [checked, setChecked] = useState(false);
     return (
       <IonPage>
         <IonContent class='background' fullscreen>
           <IonHeader>
-           <IonContent>
-             <IonToggle>asdasd</IonToggle>
-           </IonContent>
-          
+            <IonButton class="button-logout" routerLink="home">
+              Logout
+            </IonButton>
+            <section>
+           <IonButton class="button-start" size="large" >
+            Get Start
+           </IonButton>
+           </section>
   
   
             
@@ -35,5 +40,5 @@ import { IonSlide, IonSlides,  IonContent,
     );
   };
   
-  export default Home;
+  export default Ac;
   
