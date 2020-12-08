@@ -27,6 +27,16 @@ import { IonSlide, IonSlides,  IonContent,
               Logout
             </IonButton>
             <section>
+            <IonItem class="item-Ac">
+            <IonCheckbox ></IonCheckbox>
+              <IonLabel>Allow to access your location</IonLabel>
+              </IonItem>
+              <IonItem class="item-Ac1">
+              <IonCheckbox ></IonCheckbox>
+              <IonLabel>Allow to access your location</IonLabel>
+              </IonItem>
+            </section>
+            <section>
            <IonButton class="button-start" size="large" >
             Get Start
            </IonButton>
