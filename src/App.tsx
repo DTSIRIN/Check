@@ -10,6 +10,7 @@ import Class from './pages/Class';
 import Add from './pages/Add';
 import Check from './pages/Check';
 import Table from './pages/Table';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 

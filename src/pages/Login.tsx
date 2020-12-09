@@ -22,8 +22,9 @@ import {
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import ExploreContainer from "../components/ExploreContainer";
-import { pin, wifi, wine, warning, walk } from "ionicons/icons";
+import { pin, wifi, wine, warning, walk, logIn } from "ionicons/icons";
 import "./Home.css";
+import { loginUser} from '../firebaseconfig'
 
 const slideOpts = {
   initialSlide: 1,
@@ -31,11 +32,12 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
-  const [username, setUsername] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  const [username, setUsername] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
 
-  function loginUser() {
-    console.log(username, password);
+  async function login() {
+   const res = await loginUser(username, password);
+   console.log(`${res ? 'Login success' : 'Longin failed'}`)
   }
   return (
     <IonPage>
@@ -66,7 +68,7 @@ const Home: React.FC = () => {
               fill="outline"
               color="tertiary"
               size="large"
-              onClick={loginUser}
+              onClick={login}
             >
               Login
             </IonButton>

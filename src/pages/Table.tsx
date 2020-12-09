@@ -46,9 +46,7 @@ import {
   };
   
   const Home: React.FC = () => {
-    const [showAlert1, setShowAlert1] = useState(false);
-    const [SubN, setSubN] = useState<string>();
-    const [SubID, setSubID] = useState<string>();
+    
   
     return (
       <IonPage>

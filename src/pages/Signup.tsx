@@ -24,7 +24,7 @@ import { Route } from "react-router-dom";
 import ExploreContainer from "../components/ExploreContainer";
 import { pin, wifi, wine, warning, walk } from "ionicons/icons";
 import "./Home.css";
-
+import { SignUp} from '../firebaseconfig'
 const slideOpts = {
   initialSlide: 1,
   speed: 400,
@@ -39,33 +39,33 @@ const Home: React.FC = () => {
     console.log(username, password, cpassword)
   }
 
+  async function signup(){
+    const res = await SignUp(username, password);
+  }
+
   return (
     <IonPage>
       <IonContent class="background1" fullscreen>
         <IonHeader collapse="condense">
           <IonTitle class="text-signup">Register</IonTitle>
         </IonHeader>
-        <IonContent class="input">
+        <IonContent class="input">          
+
           <IonItem>
-            <IonInput placeholder="Username" class="input"
+            <IonInput placeholder="Email" class="input"
             onIonChange={(e: any) => setUsername(e.target.value)}
-            />
-             
+            />             
           </IonItem>
           <IonItem>
             <IonInput
-              
               placeholder="Password"
               class="input1"
               type="password"
               onIonChange={(e: any) => setPassword(e.target.value)}
-              
             />
-            
           </IonItem>
           <IonItem>
             <IonInput
-              
               placeholder="Confirm Password"
               class="input1"
               type="password"
