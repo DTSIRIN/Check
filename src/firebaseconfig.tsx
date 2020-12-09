@@ -1,5 +1,6 @@
 
 import firebase from 'firebase';
+import firestore from 'firebase/firestore'
 
 const config={
     apiKey: "AIzaSyDwVDcnL8kvu6QPRdW0oD4F8ao16DsfJL8",
@@ -10,16 +11,13 @@ const config={
     appId: "1:248020424955:web:3e29a3aa5fa4b0ad75785e",
     measurementId: "G-FSDD3FR1WK"
 }
+
 firebase.initializeApp(config);
 
-export async function loginUser(username: string, password: string){
-    
-    const email = `${username}@gmail.com`
-    
+var db = firebase.firestore()
+export async function loginUser(email: string, password: string){    
     try{
-    const res = await firebase.auth().signInWithEmailAndPassword(email, password)
-
-    
+    const res = await firebase.auth().signInWithEmailAndPassword(email, password)    
     console.log(res)
     return true
 }catch(error){
@@ -33,9 +31,14 @@ export async function SignUp(email:string, password:string){
 
     try{
         const res = await firebase.auth().createUserWithEmailAndPassword(email, password)
+        db.collection('User').add({
+            email,
+            password,
+            status : true
+        })
         console.log(res)
     }catch(error){
-        console.log(error)
+        console.log("Error @ SignUp" + error)
     }
 }
 

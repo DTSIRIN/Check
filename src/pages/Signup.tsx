@@ -22,7 +22,7 @@ import {
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import ExploreContainer from "../components/ExploreContainer";
-import { pin, wifi, wine, warning, walk } from "ionicons/icons";
+import { pin, wifi, wine, warning, walk ,chevronBack} from "ionicons/icons";
 import "./Home.css";
 import { SignUp} from '../firebaseconfig'
 const slideOpts = {
@@ -31,29 +31,32 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
-  const [username, setUsername] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [cpassword, setCPassword] = useState<string>('')
 
   function registerUser(){
-    console.log(username, password, cpassword)
+    console.log(email, password, cpassword)
   }
 
   async function signup(){
-    const res = await SignUp(username, password);
+    const res = await SignUp(email, password);
   }
 
   return (
     <IonPage>
       <IonContent class="background1" fullscreen>
         <IonHeader collapse="condense">
+        <IonButton routerLink="home" class="button-back">
+        <IonIcon  icon={chevronBack} />
+        </IonButton >
           <IonTitle class="text-signup">Register</IonTitle>
         </IonHeader>
         <IonContent class="input">          
 
           <IonItem>
             <IonInput placeholder="Email" class="input"
-            onIonChange={(e: any) => setUsername(e.target.value)}
+            onIonChange={(e: any) => setEmail(e.target.value)}
             />             
           </IonItem>
           <IonItem>
@@ -80,7 +83,7 @@ const Home: React.FC = () => {
               class="button-login"
               fill="outline"
               color="tertiary"
-              onClick={registerUser}
+              onClick={signup}
               
             >
               Register

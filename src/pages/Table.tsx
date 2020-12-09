@@ -52,7 +52,12 @@ import {
       <IonPage>
         <IonContent class="background1" fullscreen>
           <IonHeader>
-            
+          <IonToolbar class="background">
+            <IonButton class="button-logout" routerLink="home">
+              Logout
+            </IonButton>
+          </IonToolbar>
+          <IonSearchbar></IonSearchbar>
             
           </IonHeader>
         </IonContent>

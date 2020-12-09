@@ -23,7 +23,7 @@ import { IonSlide, IonSlides,  IonContent,
       <IonPage>
         <IonContent class='background' fullscreen>
           <IonHeader>
-            <IonButton class="button-logout" routerLink="home">
+            <IonButton class="button-logout" routerLink="home" slot="">
               Logout
             </IonButton>
             <section>
@@ -37,7 +37,7 @@ import { IonSlide, IonSlides,  IonContent,
               </IonItem>
             </section>
             <section>
-           <IonButton class="button-start" size="large" >
+           <IonButton class="button-start" size="large" routerLink="class">
             Get Start
            </IonButton>
            </section>

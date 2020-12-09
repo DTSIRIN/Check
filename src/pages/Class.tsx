@@ -68,7 +68,7 @@ const Home: React.FC = () => {
 
           </IonCol>
           <IonCol>
-          <IonButton class="add" routerLink="add">
+          <IonButton class="add" routerLink="check">
             977-341
           </IonButton>
           </IonCol>

@@ -37,6 +37,7 @@ import {
     logoGoogle,
     star,
     add,
+    chevronBack
   } from "ionicons/icons";
   import "./Home.css";
   
@@ -46,17 +47,29 @@ import {
   };
   
   const Home: React.FC = () => {
-    
+    const [showAlert1, setShowAlert1] = useState(false);
     return (
       <IonPage>
         <IonContent class="background1" fullscreen>
           <IonHeader>
           <IonToolbar class="background">
-            <IonButton class="button-logout" routerLink="home">
+            <IonButton class="button-logout1" routerLink="home" slot="end">
               Logout
             </IonButton>
+            <IonButton slot="start" class="button-back" routerLink="class">
+            <IonIcon  icon={chevronBack} />
+            </IonButton>
           </IonToolbar>
-            
+          <IonSearchbar></IonSearchbar>
+          <IonTitle class="text-check1">Check in Today</IonTitle>
+          <IonButton class="button-check1" fill="outline" size="large" onClick={() => setShowAlert1(true)}>
+                Check
+          </IonButton>
+          <IonAlert
+          isOpen={showAlert1}
+          onDidDismiss={() => setShowAlert1(false)}
+          header={'Complete Check In'}
+        />
           </IonHeader>
         </IonContent>
       </IonPage>

@@ -41,8 +41,8 @@ const App: React.FC = () => (
         <Route path="/Ac" component={Ac} exact={true}/>
         <Route path="/Class" component={Class} excat={true}/>
         <Route path="/Add" component={Add} excat={true}/>
-        <Route path="/Check" component={Add} excat={true}/>
-        <Route path="/Table" component={Add} excat={true}/>
+        <Route path="/Check" component={Check} excat={true}/>
+        <Route path="/Table" component={Table} excat={true}/>
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>
