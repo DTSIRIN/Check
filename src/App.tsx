@@ -8,7 +8,8 @@ import Signup from './pages/Signup';
 import Ac from './pages/Ac';
 import Class from './pages/Class';
 import Add from './pages/Add';
-
+import Check from './pages/Check';
+import Table from './pages/Table';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -39,6 +40,8 @@ const App: React.FC = () => (
         <Route path="/Ac" component={Ac} exact={true}/>
         <Route path="/Class" component={Class} excat={true}/>
         <Route path="/Add" component={Add} excat={true}/>
+        <Route path="/Check" component={Add} excat={true}/>
+        <Route path="/Table" component={Add} excat={true}/>
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>

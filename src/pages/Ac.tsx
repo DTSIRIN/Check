@@ -33,7 +33,7 @@ import { IonSlide, IonSlides,  IonContent,
               </IonItem>
               <IonItem class="item-Ac1">
               <IonCheckbox ></IonCheckbox>
-              <IonLabel>Allow to access your location</IonLabel>
+              <IonLabel>Allow to access your Camera</IonLabel>
               </IonItem>
             </section>
             <section>

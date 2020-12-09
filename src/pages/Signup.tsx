@@ -31,59 +31,59 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
-  const [email, setemail] = useState<string>();
-  const [password, setpassword] = useState<string>();
-  const [name, setname] = useState<string>();
+  const [username, setUsername] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+  const [cpassword, setCPassword] = useState<string>('')
+
+  function registerUser(){
+    console.log(username, password, cpassword)
+  }
 
   return (
     <IonPage>
       <IonContent class="background1" fullscreen>
         <IonHeader collapse="condense">
-          <IonTitle class="text-signup">Sign up</IonTitle>
+          <IonTitle class="text-signup">Register</IonTitle>
         </IonHeader>
         <IonContent class="input">
           <IonItem>
-            <IonInput value={email} placeholder="Email" class="input">
-              {" "}
-            </IonInput>
+            <IonInput placeholder="Username" class="input"
+            onIonChange={(e: any) => setUsername(e.target.value)}
+            />
+             
           </IonItem>
           <IonItem>
             <IonInput
-              value={password}
+              
               placeholder="Password"
               class="input1"
               type="password"
-            >
-              {" "}
-            </IonInput>
+              onIonChange={(e: any) => setPassword(e.target.value)}
+              
+            />
+            
           </IonItem>
           <IonItem>
             <IonInput
-              value={password}
-              placeholder="Password Again"
+              
+              placeholder="Confirm Password"
               class="input1"
               type="password"
-            >
-              {" "}
-            </IonInput>
+              onIonChange={(e: any) => setCPassword(e.target.value)}
+            />
+            
           </IonItem>
-          <IonItem>
-            <IonInput
-              value={password}
-              placeholder="Name"
-              class="input1"
-            >
-              {" "}
-            </IonInput>
-          </IonItem>
+          
           <section>
             <IonButton
-              routerLink=""
+              routerLink="Ac"
               class="button-login"
               fill="outline"
               color="tertiary"
+              onClick={registerUser}
+              
             >
-              Sign up
+              Register
             </IonButton>
           </section>
         </IonContent>

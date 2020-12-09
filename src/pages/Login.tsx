@@ -31,9 +31,12 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
-  const [email, setemail] = useState<string>();
-  const [password, setpassword] = useState<string>();
+  const [username, setUsername] = useState<string>();
+  const [password, setPassword] = useState<string>();
 
+  function loginUser() {
+    console.log(username, password);
+  }
   return (
     <IonPage>
       <IonContent class="background1" fullscreen>
@@ -42,19 +45,19 @@ const Home: React.FC = () => {
         </IonHeader>
         <IonContent class="input">
           <IonItem>
-            <IonInput value={email} placeholder="Email" class="input">
-              {" "}
-            </IonInput>
+            <IonInput
+              placeholder="Email"
+              class="input"
+              onIonChange={(e: any) => setUsername(e.target.value)}
+            />
           </IonItem>
           <IonItem>
             <IonInput
-              value={password}
               placeholder="Password"
               class="input1"
               type="password"
-            >
-              {" "}
-            </IonInput>
+              onIonChange={(e: any) => setPassword(e.target.value)}
+            />
           </IonItem>
           <section>
             <IonButton
@@ -63,6 +66,7 @@ const Home: React.FC = () => {
               fill="outline"
               color="tertiary"
               size="large"
+              onClick={loginUser}
             >
               Login
             </IonButton>
