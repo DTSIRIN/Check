@@ -51,12 +51,6 @@ const Home: React.FC = () => {
           </IonCard>
           <IonLabel class="label">
             <section>
-              <IonButton routerLink="Class" expand="block" class="button-home">
-                <IonIcon slot="start" icon={logoGoogle} />
-                Login with google
-              </IonButton>
-            </section>
-            <section>
               <IonButton routerLink="Login" expand="block" class="button-home">
                 Login
               </IonButton>
