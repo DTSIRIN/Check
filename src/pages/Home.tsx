@@ -1,57 +1,72 @@
-import { IonSlide, IonSlides,  IonContent, 
-  IonHeader, IonPage, IonTitle, 
-  IonToolbar, IonCard, IonCardHeader, IonCardSubtitle, 
-  IonCardTitle, IonCardContent, IonItem, IonIcon, IonLabel, 
-  IonButton,IonInput, IonText, IonRouterOutlet } from '@ionic/react';
-import React from  'react';
-import { Route } from 'react-router-dom'
-import ExploreContainer from '../components/ExploreContainer';
-import { pin, wifi, wine, warning, walk, logoGoogle,star } from 'ionicons/icons';
-import './Home.css';
+import {
+  IonSlide,
+  IonSlides,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCardContent,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonButton,
+  IonInput,
+  IonText,
+  IonRouterOutlet,
+} from "@ionic/react";
+import React from "react";
+import { Route } from "react-router-dom";
+import ExploreContainer from "../components/ExploreContainer";
+import {
+  pin,
+  wifi,
+  wine,
+  warning,
+  walk,
+  logoGoogle,
+  star,
+} from "ionicons/icons";
+import "./Home.css";
 
 const slideOpts = {
   initialSlide: 1,
-  speed: 400
-  
+  speed: 400,
 };
 
-
 const Home: React.FC = () => {
-
   return (
     <IonPage>
-      <IonContent class='background' fullscreen>
+      <IonContent class="background" fullscreen>
         <IonHeader>
-         
-        <IonCard class='card-check'>
-          <IonCardHeader>
-            <IonCardSubtitle></IonCardSubtitle>
-            <IonCardTitle class="text-check"> 
-              CHECK!
-
-            </IonCardTitle>
-          </IonCardHeader>
-
-        
-        </IonCard>
-        <IonLabel class="label">
+          <IonCard class="card-check">
+            <IonCardHeader>
+              <IonCardSubtitle></IonCardSubtitle>
+              <IonCardTitle class="text-check">CHECK!</IonCardTitle>
+            </IonCardHeader>
+          </IonCard>
+          <IonLabel class="label">
             <section>
-            
-              <IonButton routerLink="Class" expand="block"  class="button-home" >
-              <IonIcon slot="start" icon={logoGoogle} />
+              <IonButton routerLink="Class" expand="block" class="button-home">
+                <IonIcon slot="start" icon={logoGoogle} />
                 Login with google
               </IonButton>
             </section>
             <section>
-              <IonButton routerLink="Login" expand="block" class="button-home">Login</IonButton>
+              <IonButton routerLink="Login" expand="block" class="button-home">
+                Login
+              </IonButton>
             </section>
             <section>
-              <IonButton routerLink="Signup" expand="block" class="button-home">Sign Up</IonButton>
+              <IonButton routerLink="Signup" expand="block" class="button-home">
+                Sign Up
+              </IonButton>
             </section>
-        </IonLabel>
-
-
-          
+          </IonLabel>
         </IonHeader>
       </IonContent>
     </IonPage>

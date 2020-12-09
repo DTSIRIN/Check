@@ -24,8 +24,6 @@ import {
   IonGrid,
   IonAlert,
   IonMenu,
-  IonRow,
-  IonCol
 } from "@ionic/react";
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
@@ -49,34 +47,29 @@ const slideOpts = {
 
 const Home: React.FC = () => {
   const [showAlert1, setShowAlert1] = useState(false);
+  const [SubN, setSubN] = useState<string>();
+  const [SubID, setSubID] = useState<string>();
 
   return (
     <IonPage>
       <IonContent class="background1" fullscreen>
         <IonHeader>
-          <IonToolbar class="background">
-            <IonButton class="button-logout" routerLink="home">
-              Logout
-            </IonButton>
-          </IonToolbar>
-          <IonSearchbar></IonSearchbar>
-    <IonRow>
-      <IonCol>
-          <IonButton class="add" routerLink="add">
-            <IonIcon icon={add} size="large"/>
+          <IonCard class='add-card'>
+            <section>
+              <IonItem>
+                <IonInput placeholder="Subjectname" value={SubN} />
+              </IonItem>
+            </section>
+            <section>
+              <IonItem>
+                <IonInput placeholder="Subjectid" value={SubID}/>
+              </IonItem>
+            </section>
+            <IonButton class="text-create" size="large" routerLink="Class">
+                Create
           </IonButton>
-
-          </IonCol>
-          <IonCol>
-          <IonButton class="add" routerLink="add">
-            977-341
-          </IonButton>
-          </IonCol>
-          <IonCol>
-
-          </IonCol>
-          </IonRow>
-
+          </IonCard>
+          
         </IonHeader>
       </IonContent>
     </IonPage>

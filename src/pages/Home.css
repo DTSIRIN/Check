@@ -94,3 +94,27 @@
   --background: 6c12f5;
   color: #ffffff;
 }
+
+.search {
+  color: #6c12f5;
+  --background: #6c12f5;
+}
+
+.add {
+  height: 100px;
+  width: 100px;
+}
+
+.IonIcon {
+  font-size: xx-large;
+}
+
+.text-create {
+  margin-top: 30%;
+  color: #6c12f5;
+  margin-left: 35%;
+}
+
+.add-card {
+  margin-top: 30%;
+}
